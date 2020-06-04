@@ -1,22 +1,23 @@
 import React, {Component} from 'react';
 
 class Key extends Component {
-  constructor(props) {
-    super(props);
-  }
   
   render() {
     const handleClick = (e) => {
       const sound = document.getElementById(this.props.sound.key);
       sound.play();
       this.props.changeText(this.props.sound.id);
+      const drumPad = document.getElementById(this.props.sound.id);
+      drumPad.classList.add('pressed');
+      setTimeout(() => {
+        drumPad.classList.remove('pressed')
+      }, 100)
     }
+
     return (
       <div className="col-4">
         <button type="button"
-          id={this.props.sound.id}
           className="btn btn-block drum-pad"
-          ref={"drumButton" + this.props.sound.key}
           key={this.props.sound.key}
           id={this.props.sound.id}
           onClick={handleClick}

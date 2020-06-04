@@ -23,11 +23,17 @@
   padding-top: 10px;
 }
 
-.drum-pad:hover {
+/* .drum-pad:hover {
   background-color: rgb(105, 105, 105);
 }
 
 .drum-pad:active {
+  background-color: rgb(105, 105, 105);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+} */
+
+.pressed {
   background-color: rgb(105, 105, 105);
   box-shadow: 0 5px #666;
   transform: translateY(4px);
